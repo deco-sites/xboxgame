@@ -9,9 +9,9 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
+import * as $$$0 from "./sections/BannerMain.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
+import * as $$$2 from "./sections/Header.tsx";
 import * as $$$3 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
@@ -24,27 +24,41 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
+    "./sections/BannerMain.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
+    "./sections/Header.tsx": $$$2,
     "./sections/QuillText.tsx": $$$3,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
-    "./sections/GetStarted.tsx": {
+    "./sections/BannerMain.tsx": {
       "inputSchema": {
-        "title": " Get Started",
+        "title": " Banner Main",
         "type": "object",
         "properties": {
-          "enableInspectVSCode": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Enable Inspect V S Code",
+          "img": {
+            "type": "string",
+            "title": "Img",
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+          },
+          "link": {
+            "type": "string",
+            "title": "Link",
           },
         },
-        "required": [],
+        "required": [
+          "img",
+          "heading",
+          "text",
+          "link",
+        ],
       },
       "outputSchema": null,
     },
@@ -97,21 +111,12 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
-    "./sections/Markdown.tsx": {
+    "./sections/Header.tsx": {
       "inputSchema": {
-        "title": " Markdown",
+        "title": " Header",
         "type": "object",
-        "properties": {
-          "text": {
-            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
-            "format": "live-function",
-            "type": "string",
-            "title": "Text",
-          },
-        },
-        "required": [
-          "text",
-        ],
+        "properties": {},
+        "required": [],
       },
       "outputSchema": null,
     },

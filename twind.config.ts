@@ -1,4 +1,8 @@
-/** @type {import('$fresh/plugins/twind').Options} */
+/**
+ * @format
+ * @type {import('$fresh/plugins/twind').Options}
+ */
+
 export default {
   theme: {
     extend: {
@@ -9,14 +13,19 @@ export default {
         xl: "1280px",
         "2xl": "1536px",
       },
+
+      fontSize: {},
+
       colors: {
-        primary: "#2FD180",
-        "primary-dark": "#003232",
-        "primary-light": "#C5FFE9",
+        white: "#fff",
+        primary: "#3B44F6",
+        "primary-light": "##D8DAFD",
+        pink: "#FC326F",
+        black: "#0E0E0E",
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["Albert Sans", "sans-serif"],
+        sans: ["Lexend", "sans-serif"],
         serif: ["serif"],
       },
     },
